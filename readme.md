@@ -70,6 +70,7 @@ FragmentTransaction类中的常用方法说明
 |detach()|将视图View从UI中移除，和remove()不同，fragment的状态仍然由FragmentManager所维护|
 
 **activity_back_task.xml**
+
 布局文件中通过声明一个FrameLayout用于动态添加fragment
 
 ```xml
@@ -118,6 +119,7 @@ FragmentTransaction类中的常用方法说明
 ```
 
 **TabContentFragment.java**
+
 Fragment正确的传参方式是：使用一个静态工厂方法getInstance(String)，来返回一个fragment实例，在此方法中传进来的String类型参数，会先以键值对方式存放到Bundle中，然后在调用setArguments(Bundle)方法将其保存起来。使用参数时可以在onCreate(Bundle)事件中调用getArguments()方法来获取。
 
 ```java
@@ -180,6 +182,7 @@ public class TabContentFragment extends Fragment {
 ```
 
 **BackTaskActivity.java**
+
 fragment回退栈的操作主要是：在替换fragment时，使用FragmentTransaction.addToBackStack(String)方法将当前的fragment添加到回退栈中，然后再调用commit()来有效化更改。然后重写onKeyDown(int, KeyEvent)事件方法来判断返回按键是否被按下，若按下了返回键，当回退栈中的fragment个数不为0时，调用FragmentManager.popBackStack()返回到先前的fragment界面，若为0则直接调用finish()来退出Activity。
 在Activity中的onCreate(Bundle)方法中，会先动态添加默认的fragment界面，而为了防止出现在回退栈操作中，当回退最后的fragment时出现Activity空白界面，故在此处默认添加fragment时并不将其添加到回退栈中。
 
@@ -356,6 +359,7 @@ MenuFragment的xml布局 **fragment_menu.xml**
 ```
 
 **MainFragment.java**
+
 MainFragment中包含有一个TextView，用于同步显示按钮的内容，故在此提供了一个public方法，用于在activity中进行调用。
 
 ```java
@@ -394,6 +398,7 @@ public class MainFragment extends Fragment {
 ```
 
 **MenuFragment.java**
+
 MenuFragment中包含有两个按钮，故定义了一个事件回调接口，用于activity的交互。
 需要注意的是：onAttach(Context)只有在API23中才会被调用，故还是需要使用onAttach(Activity)方法。当然也可以使用另一种方式，就是向外部提供一个public方法来手动设置事件监听器。
 
@@ -483,6 +488,7 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
 ```
 
 **InteractionFragmentActivity.java**
+
 activity中实现了MenuFragment.OnMenuClickListener接口，来监听按钮事件，并设置MainFragment中的TextView。
 
 ```java
