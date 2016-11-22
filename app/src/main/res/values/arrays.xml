@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="language">
+        <item>C/C++</item>
+        <item>Java</item>
+        <item>Python</item>
+        <item>Swift</item>
+    </array>
+</resources>

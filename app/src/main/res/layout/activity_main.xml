@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context="com.shellever.fragment.MainActivity">
+
+    <Button
+        android:id="@+id/btn_fragment_declare"
+        android:textAllCaps="false"
+        android:text="布局文件中声明fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_fragment_program"
+        android:textAllCaps="false"
+        android:text="代码中添加fragment"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_fragment_back_task"
+        android:textAllCaps="false"
+        android:text="Fragment返回栈操作"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_fragment_interaction"
+        android:textAllCaps="false"
+        android:text="Activity与Fragment交互"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/btn_fragment_preference"
+        android:textAllCaps="false"
+        android:text="PreferenceFragment"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

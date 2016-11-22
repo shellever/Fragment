@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Voice">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="voice"
+            android:summary="turn on/off"
+            android:title="Voice Setting" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="City">
+        <EditTextPreference
+            android:defaultValue="shenzhen"
+            android:key="city_name"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:dialogTitle="Input your city"
+            android:summary="input your city"
+            android:title="City Name" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Language">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/language"
+            android:entryValues="@array/language"
+            android:dialogTitle="Select your language"
+            android:key="language"
+            android:title="Program Language"
+            android:summary="select your language"/>
+    </PreferenceCategory>
+</PreferenceScreen>
